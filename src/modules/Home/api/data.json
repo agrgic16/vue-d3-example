@@ -1,0 +1,145 @@
+[
+  {
+    "title": "Dashboard A",
+    "layoutClass": "dashboard-row",
+    "sections": [
+      {
+        "layoutClass": "dashboard-column",
+        "tiles": [
+          {
+            "data": [
+              { "name": "A", "value": 100 },
+              { "name": "B", "value": 470 },
+              { "name": "C", "value": 900 },
+              { "name": "D", "value": 1100 },
+              { "name": "E", "value": 455 }
+            ],
+            "height": 190,
+            "tileId": "A",
+            "title": "Chart A",
+            "width": 400
+          },
+          {
+            "data": [
+              { "name": "USA", "value": 8000 },
+              { "name": "Germany", "value": 5700 },
+              { "name": "Spain", "value": 900 },
+              { "name": "France", "value": 4500 },
+              { "name": "Australia", "value": 3350 },
+              { "name": "Egypt", "value": 6000 }
+            ],
+            "height": 190,
+            "tileId": "B",
+            "title": "Chart B",
+            "width": 400
+          },
+          {
+            "data": [
+              { "name": "B", "value": 470 },
+              { "name": "C", "value": 900 },
+              { "name": "E", "value": 455 }
+            ],
+            "height": 190,
+            "tileId": "E",
+            "title": "Chart E",
+            "width": 400
+          }
+        ]
+      },
+      {
+        "layoutClass": "dashboard-row",
+        "tiles": [
+          {
+            "data": [
+              { "name": "USA", "value": 8000 },
+              { "name": "France", "value": 4500 },
+              { "name": "Australia", "value": 3350 },
+              { "name": "Egypt", "value": 6000 }
+            ],
+            "height": 630,
+            "tileId": "C",
+            "title": "Chart C",
+            "width": 250
+          },
+          {
+            "data": [
+              { "name": "USA", "value": 8000 },
+              { "name": "Germany", "value": 5700 },
+              { "name": "Spain", "value": 900 }
+            ],
+            "height": 630,
+            "tileId": "D",
+            "title": "Chart D",
+            "width": 250
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Dashboard B",
+    "layoutClass": "dashboard-row",
+    "sections": [
+      {
+        "layoutClass": "dashboard-column",
+        "tiles": [
+          {
+            "data": [
+              { "name": "A", "value": 100 },
+              { "name": "B", "value": 470 },
+              { "name": "C", "value": 900 },
+              { "name": "D", "value": 1100 },
+              { "name": "E", "value": 455 }
+            ],
+            "height": 190,
+            "tileId": "A",
+            "title": "Chart A",
+            "width": 400
+          },
+          {
+            "data": [
+              { "name": "USA", "value": 8000 },
+              { "name": "Germany", "value": 5700 },
+              { "name": "Spain", "value": 900 },
+              { "name": "France", "value": 4500 },
+              { "name": "Australia", "value": 3350 },
+              { "name": "Egypt", "value": 6000 }
+            ],
+            "height": 190,
+            "tileId": "B",
+            "title": "Chart B",
+            "width": 400
+          }
+        ]
+      },
+      {
+        "layoutClass": "dashboard-row",
+        "tiles": [
+          {
+            "data": [
+              { "name": "USA", "value": 8000 },
+              { "name": "France", "value": 4500 },
+              { "name": "Australia", "value": 3350 },
+              { "name": "Egypt", "value": 6000 }
+            ],
+            "height": 630,
+            "tileId": "C",
+            "title": "Chart C",
+            "width": 250
+          },
+          {
+            "data": [
+              { "name": "USA", "value": 8000 },
+              { "name": "Germany", "value": 5700 },
+              { "name": "Spain", "value": 900 }
+            ],
+            "height": 630,
+            "tileId": "D",
+            "title": "Chart D",
+            "width": 250
+          }
+        ]
+      }
+    ]
+  }
+]
