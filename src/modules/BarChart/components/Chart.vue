@@ -82,8 +82,7 @@ export default class Chart extends Vue {
       const svg = d3.select(`#${this.tileId}`)
         .attr('viewBox', [0, 0, width, height] as any);
 
-      const elements = svg.append('g');
-      elements
+      svg.append('g')
         .attr('fill', color)
         .selectAll('rect')
         .data(data)
