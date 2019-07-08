@@ -1,0 +1,241 @@
+{
+  "dashboards": [
+    {
+      "id": "A0",
+      "dashboardId": "A0",
+      "title": "Dashboard A",
+      "layoutClass": "dashboard-row",
+      "sections": [
+        {
+          "sectionId": "A00",
+          "layoutClass": "dashboard-column",
+          "tiles": [
+            {
+              "data": [
+                { "name": "A", "value": 100 },
+                { "name": "B", "value": 470 },
+                { "name": "C", "value": 900 },
+                { "name": "D", "value": 1100 },
+                { "name": "E", "value": 455 }
+              ],
+              "height": 190,
+              "tileId": "A00A",
+              "title": "Chart A",
+              "width": 400,
+              "primaryColor": "#CDDC39",
+              "secondaryColor": "#4287f5"
+            },
+            {
+              "data": [
+                { "name": "USA", "value": 8000 },
+                { "name": "Germany", "value": 5700 },
+                { "name": "Spain", "value": 900 },
+                { "name": "France", "value": 4500 },
+                { "name": "Australia", "value": 3350 },
+                { "name": "Egypt", "value": 6000 }
+              ],
+              "height": 190,
+              "tileId": "A00B",
+              "title": "Chart B",
+              "width": 400,
+              "primaryColor": "#CDDC39",
+              "secondaryColor": "#4287f5"
+            },
+            {
+              "data": [
+                { "name": "B", "value": 470 },
+                { "name": "C", "value": 900 },
+                { "name": "E", "value": 455 }
+              ],
+              "height": 190,
+              "tileId": "A00E",
+              "title": "Chart E",
+              "width": 400,
+              "primaryColor": "#CDDC39",
+              "secondaryColor": "#4287f5"
+            }
+          ]
+        },
+        {
+          "sectionId": "A01",
+          "layoutClass": "dashboard-row",
+          "tiles": [
+            {
+              "data": [
+                { "name": "USA", "value": 8000 },
+                { "name": "France", "value": 4500 },
+                { "name": "Australia", "value": 3350 },
+                { "name": "Egypt", "value": 6000 }
+              ],
+              "height": 630,
+              "tileId": "A01C",
+              "title": "Chart C",
+              "width": 250,
+              "primaryColor": "#4287f5",
+              "secondaryColor": "#4287f5"
+            },
+            {
+              "data": [
+                { "name": "USA", "value": 8000 },
+                { "name": "Germany", "value": 5700 },
+                { "name": "Spain", "value": 900 }
+              ],
+              "height": 630,
+              "tileId": "A01D",
+              "title": "Chart D",
+              "width": 250,
+              "primaryColor": "#4287f5",
+              "secondaryColor": "#4287f5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "A1",
+      "dashboardId": "A1",
+      "title": "Dashboard B",
+      "layoutClass": "dashboard-row",
+      "sections": [
+        {
+          "sectionId": "A12",
+          "layoutClass": "dashboard-column",
+          "tiles": [
+            {
+              "data": [
+                { "name": "A", "value": 100 },
+                { "name": "D", "value": 1100 },
+                { "name": "E", "value": 455 }
+              ],
+              "height": 190,
+              "tileId": "A12A",
+              "title": "Chart A",
+              "width": 400,
+              "primaryColor": "#4287f5",
+              "secondaryColor": "#4287f5"
+            },
+            {
+              "data": [
+                { "name": "USA", "value": 8000 },
+                { "name": "Germany", "value": 5700 },
+                { "name": "Australia", "value": 3350 },
+                { "name": "Egypt", "value": 6000 }
+              ],
+              "height": 190,
+              "tileId": "A12B",
+              "title": "Chart B",
+              "width": 400,
+              "primaryColor": "#4287f5",
+              "secondaryColor": "#4287f5"
+            }
+          ]
+        },
+        {
+          "sectionId": "A13",
+          "layoutClass": "dashboard-row",
+          "tiles": [
+            {
+              "data": [
+                { "name": "USA", "value": 4500 },
+                { "name": "Australia", "value": 6000 },
+                { "name": "Egypt", "value": 3000 }
+              ],
+              "height": 630,
+              "tileId": "A13C",
+              "title": "Chart C",
+              "width": 250,
+              "primaryColor": "#8BC34A",
+              "secondaryColor": "#4287f5"
+            },
+            {
+              "data": [
+                { "name": "USA", "value": 5390 },
+                { "name": "Germany", "value": 6020 },
+                { "name": "Spain", "value": 2440 }
+              ],
+              "height": 630,
+              "tileId": "A13D",
+              "title": "Chart D",
+              "width": 250,
+              "primaryColor": "#8BC34A",
+              "secondaryColor": "#4287f5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "A2",
+      "dashboardId": "A2",
+      "title": "Dashboard C",
+      "layoutClass": "dashboard-row",
+      "sections": [
+        {
+          "sectionId": "A23",
+          "layoutClass": "dashboard-row",
+          "tiles": [
+            {
+              "data": [
+                { "name": "USA", "value": 4500 },
+                { "name": "Australia", "value": 6000 },
+                { "name": "Egypt", "value": 3000 }
+              ],
+              "height": 630,
+              "tileId": "A23C",
+              "title": "Chart C",
+              "width": 250,
+              "primaryColor": "#F44336",
+              "secondaryColor": "#4287f5"
+            },
+            {
+              "data": [
+                { "name": "USA", "value": 5390 },
+                { "name": "Germany", "value": 6020 },
+                { "name": "Spain", "value": 2440 }
+              ],
+              "height": 630,
+              "tileId": "A23D",
+              "title": "Chart D",
+              "width": 250,
+              "primaryColor": "#F44336",
+              "secondaryColor": "#4287f5"
+            }
+          ]
+        },
+        {
+          "sectionId": "A22",
+          "layoutClass": "dashboard-column",
+          "tiles": [
+            {
+              "data": [
+                { "name": "USA", "value": 8000 },
+                { "name": "Germany", "value": 5700 },
+                { "name": "Australia", "value": 3350 },
+                { "name": "Egypt", "value": 6000 }
+              ],
+              "height": 190,
+              "tileId": "A22A",
+              "title": "Chart B",
+              "width": 400,
+              "primaryColor": "#FF9800",
+              "secondaryColor": "#4287f5"
+            },
+            {
+              "data": [
+                { "name": "A", "value": 100 },
+                { "name": "D", "value": 1100 },
+                { "name": "E", "value": 455 }
+              ],
+              "height": 190,
+              "tileId": "A22B",
+              "title": "Chart A",
+              "width": 400,
+              "primaryColor": "#FF9800",
+              "secondaryColor": "#4287f5"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

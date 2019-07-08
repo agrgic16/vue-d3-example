@@ -9,14 +9,14 @@ export default new Router({
   base: process.env.BASE_URL,
   routes: [
     {
-      path: '/',
-      name: 'home',
+      path: '/:parent_id',
+      name: 'selected-parent',
       component: Home,
     },
     {
-      path: '/chart/bar',
-      name: 'chart-bar',
-      component: () => import('./modules/BarChart/BarChart.vue'),
+      path: '/:parent_id/:dashboard_id',
+      name: 'selected-dashboard',
+      component: Home,
     },
   ],
 });

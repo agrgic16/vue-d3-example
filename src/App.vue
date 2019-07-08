@@ -1,8 +1,8 @@
 <template>
-  <v-app>
+  <v-app dark>
     <v-toolbar
       app
-      color="red"
+      color="primary"
       dense
     >
 
@@ -12,15 +12,6 @@
         <span>Simple</span>
         <span class="font-weight-light">Dashboard</span>
       </v-toolbar-title>
-
-      <v-overflow-btn
-        :items="dashboards"
-        editable
-        label="Dashboards..."
-        hide-details
-        class="pa-0"
-        overflow
-      ></v-overflow-btn>
 
       <v-spacer></v-spacer>
 
@@ -61,8 +52,6 @@
 <script>
 export default {
   name: 'App',
-  components: {
-  },
   data() {
     return {
       menuItems: [

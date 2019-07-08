@@ -34,6 +34,7 @@ import { DashboardSection } from '@/core/models';
 export default class DashboardLayoutComponent extends Vue {
   layoutClass!: string;
   sections!: DashboardSection[];
+
 }
 </script>
 

@@ -3,8 +3,9 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+import { Component, Vue, Watch } from 'vue-property-decorator';
 import * as d3 from 'd3';
+import { transition } from 'd3';
 
 const colors = [
   {
@@ -19,9 +20,9 @@ const colors = [
 
 
 @Component<Chart>({
-  components: {
-  },
   props: [
+    'primaryColor',
+    'secondaryColor',
     'data',
     'height',
     'tileId',
@@ -33,9 +34,13 @@ export default class Chart extends Vue {
   height!: number;
   tileId!: string;
   width!: number;
+  primaryColor!: string;
+  secondaryColor!: string;
 
   mounted() {
-    this.createChart();
+    if (this.tileId !== null && this.tileId !== undefined) {
+      this.createChart();
+    }
   }
 
   async createChart() {
@@ -54,12 +59,10 @@ export default class Chart extends Vue {
 
     const height = this.height;
     const width = this.width;
-
-    const { color } = colors[1];
+    const color = this.$vuetify.theme.accent.toString();
 
     const y = d3.scaleLinear()
       .domain([0, d3.max(data, (d: any) => d.value)])
-      .nice()
       .range([height - margin.bottom, margin.top]);
 
     const x = d3.scaleBand()
@@ -69,8 +72,7 @@ export default class Chart extends Vue {
 
     const yAxis = (g: any) => g
       .attr('transform', `translate(${margin.left},0)`)
-      .call(d3.axisLeft(y))
-      .call((g: any) => g.select('.domain').remove());
+      .call(d3.axisLeft(y).ticks(5));
 
     const xAxis = (g: any) => g
       .attr('transform', `translate(0,${height - margin.bottom})`)
@@ -78,23 +80,36 @@ export default class Chart extends Vue {
 
     const chart = () => {
       const svg = d3.select(`#${this.tileId}`)
-        .attr('viewBox', [0, 0, width, height]);
+        .attr('viewBox', [0, 0, width, height] as any);
 
-      svg.append('g')
+      const elements = svg.append('g');
+      elements
         .attr('fill', color)
         .selectAll('rect')
         .data(data)
         .join('rect')
-        .attr('x', (d: any) => x(d.name))
+        .attr('opacity', '.85')
+        .attr('x', (d: any) => x(d.name) as any)
+        .attr('width', x.bandwidth())
+        .attr('y', (d: any) => y(0))
+        .attr('height', (d: any) => 0)
+        .transition()
+        .delay((d: any, i: number) => i * 80)
+        .duration(350)
         .attr('y', (d: any) => y(d.value))
-        .attr('height', (d: any) => y(0) - y(d.value))
-        .attr('width', x.bandwidth());
+        .attr('height', (d: any) => y(0) - y(d.value));
+
 
       svg.append('g')
         .call(xAxis);
 
       svg.append('g')
-        .call(yAxis);
+        .call(yAxis)
+        .call((g: any) => g.select('.domain').remove())
+        .attr('opacity', 0)
+        .transition()
+        .delay(350)
+        .attr('opacity', 1);
 
       return svg.node();
     };

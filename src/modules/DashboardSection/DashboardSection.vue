@@ -13,16 +13,16 @@ import { Component, Vue } from 'vue-property-decorator';
 import { DashboardTile } from '@/core/models';
 
 @Component<DashboardSectionComponent>({
-  components: {
-  },
   props: [
     'layoutClass',
+    'sectionId',
     'tiles',
   ],
 })
 export default class DashboardSectionComponent extends Vue {
   layoutClass!: string;
-  tiles!: DashboardTile<any>[];
+  sectionId!: string;
+  tiles!: DashboardTile[];
 }
 </script>
 

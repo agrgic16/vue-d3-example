@@ -1,13 +1,20 @@
 <template>
-  <DashboardLayout v-bind="dashboards[0]">
-    <template v-slot:section="section">
-      <DashboardSection v-bind="section">
-        <template v-slot:card="card">
-          <BarChart v-bind="card" />
-        </template>
-      </DashboardSection>
+  <Dashboard :dashboards="dashboards">
+    <template v-slot:navigation="navigation">
+      <v-breadcrumbs v-bind="navigation" divider="|"></v-breadcrumbs>
     </template>
-  </DashboardLayout>
+    <template v-slot:data="dashboard">
+      <DashboardLayout v-bind="dashboard">
+        <template v-slot:section="section">
+          <DashboardSection v-bind="section">
+            <template v-slot:card="card">
+              <BarChart v-bind="card" />
+            </template>
+          </DashboardSection>
+        </template>
+      </DashboardLayout>
+    </template>
+  </Dashboard>
 </template>
 
 <script lang="ts">
@@ -18,6 +25,7 @@ import { Dashboard } from '@/core/models';
 import BarChart from '@/modules/BarChart/BarChart.vue';
 import DashboardLayout from '@/modules/DashboardLayout/DashboardLayout.vue';
 import DashboardSection from '@/modules/DashboardSection/DashboardSection.vue';
+import DashboardComponent from '@/modules/Dashboard/Dashboard.vue';
 
 import dashboards from './api/data.json';
 
@@ -26,16 +34,14 @@ import dashboards from './api/data.json';
     BarChart,
     DashboardLayout,
     DashboardSection,
+    Dashboard: DashboardComponent,
   },
 })
 export default class HomeComponent extends Vue {
   dashboards: Dashboard[] = [];
 
   mounted() {
-    this.dashboards = dashboards;
+    this.dashboards = dashboards as Dashboard[];
   }
 }
 </script>
-
-<style lang="scss" scoped>
-</style>

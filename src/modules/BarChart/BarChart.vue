@@ -1,20 +1,22 @@
 <template>
   <div>
-    <div class="card-title">
-      <h1>{{title}}</h1>
-      <v-icon>color_lens</v-icon>
-    </div>
+    <v-toolbar class="card-toolbar" color="primary" dense>
+      <v-toolbar-title>{{title}}</v-toolbar-title>
+    </v-toolbar>
     <Chart
       :data="data"
       :height="height"
       :tileId="tileId"
       :width="width"
+      :primaryColor="primaryColor"
+      :secondaryColor="secondaryColor"
     />
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
+
 import Chart from './components/Chart.vue';
 
 @Component<BarChartComponent>({
@@ -24,6 +26,8 @@ import Chart from './components/Chart.vue';
     'title',
     'width',
     'height',
+    'primaryColor',
+    'secondaryColor',
   ],
   components: {
     Chart,
@@ -35,13 +39,14 @@ export default class BarChartComponent extends Vue {
   tileId!: string;
   title!: string;
   width!: number;
+  primaryColor!: string;
+  secondaryColor!: string;
 }
 </script>
 
 <style lang="scss" scoped>
-  .card-title {
-    justify-content: space-between;
-    display: flex;
-    flex-direction: row;
+  .card-toolbar {
+    position: relative;
+    top: -25px;
   }
 </style>

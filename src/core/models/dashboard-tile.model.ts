@@ -5,4 +5,7 @@ export interface DashboardTile<T = any> {
 
   tileId: string;
   title: string;
+
+  primaryColor: string;
+  secondaryColor: string;
 }
