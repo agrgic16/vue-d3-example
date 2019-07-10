@@ -21,8 +21,6 @@ const colors = [
 
 @Component<Chart>({
   props: [
-    'primaryColor',
-    'secondaryColor',
     'data',
     'height',
     'tileId',
@@ -34,8 +32,6 @@ export default class Chart extends Vue {
   height!: number;
   tileId!: string;
   width!: number;
-  primaryColor!: string;
-  secondaryColor!: string;
 
   mounted() {
     if (this.tileId !== null && this.tileId !== undefined) {
@@ -57,8 +53,8 @@ export default class Chart extends Vue {
       left: 40,
     };
 
-    const height = this.height;
-    const width = this.width;
+    const height = this.height; // this.$el.clientHeight;
+    const width = this.width; // this.$el.clientWidth;
     const color = this.$vuetify.theme.accent.toString();
 
     const y = d3.scaleLinear()
@@ -104,11 +100,7 @@ export default class Chart extends Vue {
 
       svg.append('g')
         .call(yAxis)
-        .call((g: any) => g.select('.domain').remove())
-        .attr('opacity', 0)
-        .transition()
-        .delay(350)
-        .attr('opacity', 1);
+        .call((g: any) => g.select('.domain').remove());
 
       return svg.node();
     };

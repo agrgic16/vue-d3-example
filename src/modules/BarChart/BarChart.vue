@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-toolbar class="card-toolbar" color="primary" dense>
+    <v-toolbar class="card-toolbar" color="transparent" dense flat>
       <v-toolbar-title>{{title}}</v-toolbar-title>
     </v-toolbar>
     <Chart
@@ -8,8 +8,6 @@
       :height="height"
       :tileId="tileId"
       :width="width"
-      :primaryColor="primaryColor"
-      :secondaryColor="secondaryColor"
     />
   </div>
 </template>
@@ -26,8 +24,6 @@ import Chart from './components/Chart.vue';
     'title',
     'width',
     'height',
-    'primaryColor',
-    'secondaryColor',
   ],
   components: {
     Chart,
@@ -39,14 +35,13 @@ export default class BarChartComponent extends Vue {
   tileId!: string;
   title!: string;
   width!: number;
-  primaryColor!: string;
-  secondaryColor!: string;
 }
 </script>
 
 <style lang="scss" scoped>
   .card-toolbar {
-    position: relative;
-    top: -25px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
   }
 </style>

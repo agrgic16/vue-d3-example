@@ -1,8 +1,15 @@
 <template>
   <div :class="layoutClass">
 
-    <v-card class="card" v-for="tile in tiles" :key="tile.tileId">
-      <slot name="card" v-bind="tile"></slot>
+    <v-card
+      class="card"
+      v-for="tile in tiles"
+      :key="tile.tileId"
+    >
+      <slot
+        name="card"
+        v-bind="tile"
+      ></slot>
     </v-card>
 
   </div>
@@ -29,7 +36,7 @@ export default class DashboardSectionComponent extends Vue {
 <style lang="scss" scoped>
   .card {
     margin: 20px;
-    padding: 5px 20px 5px 20px;
+    padding: 5px 10px 5px 10px;
     flex: 1;
   }
 </style>
